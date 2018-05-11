@@ -112,6 +112,26 @@ class CrowdPredictor():
 
         return all_area
 
+        @staticmethod
+        def video2img(input_video_path, output_path):
+            cap = cv2.VideoCapture(input_video_path)
+            count = 0
+            rval = cap.isOpened()
+            # fps = 1
+            while rval:
+                count = count + 1
+                rval, frame = cap.read()
+                # if(count%fps == 0):
+                #     cv2.imwrite('{}/{}.jpg'.format(output_path, count), frame)
+                if rval:
+                    img_path = '{}/{}.jpg'.format(output_path, count)
+                    cv2.imwrite(img_path, frame)
+                    cv2.waitKey(1)
+                else:
+                    break
+            cap.release()
+
+
 # count for image
 # fps_count_i = 1
 # original_count_j = 1
