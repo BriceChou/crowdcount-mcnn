@@ -113,27 +113,11 @@ class CrowdPredictor():
         return all_area
 
 
-# How many fps to get the iamge for original video
-fps = 30
-
 # Config the model weights path
 final_models_path = os.path.abspath('../saved_models')
 
-# Config the input image folder
-input_path = os.path.abspath('../input')
-input_fps_path = os.path.abspath('../input_original_{}'.format(fps))
-
-# Config the output image folder
-output_path = os.path.abspath('../output_original_1')
-output_fps_path = os.path.abspath('../output_original_{}'.format(fps))
-
 # Cofig the output video folder
 video_output_path = os.path.abspath('../output_video')
-video_output_fps_path = os.path.abspath('../output_video_{}'.format(fps))
-
-# Get the folder file counts
-total_num = lib.get_file_max_number(input_path)
-total_fps_num = lib.get_file_max_number(input_fps_path)
 
 # Config the output video parameter
 video_fps = 10
