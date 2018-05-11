@@ -3,16 +3,7 @@ import network
 import numpy as np
 import cv2
 import os
-import sys
 import time
-
-# Extend on our system's path and can load the other folder's file
-sys.path.append('..')
-import lib
-
-# Use the utf-8 coded format
-reload(sys)
-sys.setdefaultencoding('utf-8')
 
 
 class CrowdPredictor():
